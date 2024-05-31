@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace calendario_de_actividades
@@ -83,6 +83,14 @@ namespace calendario_de_actividades
             void mostrarActividades()
             {
                 Console.Clear();
+                if ((actividades.Count - 1) != 1 || (actividades.Count - 1) == 0)
+                {
+                    Console.WriteLine($"Usted tiene {actividades.Count - 1} actividades");
+                }
+                else
+                {
+                    Console.WriteLine($"Usted tiene {actividades.Count - 1} actividad");
+                }
                 for (int i = 1; i < actividades.Count; i++)
                 {
                     Console.WriteLine($"{i}. {actividades[i]}");
